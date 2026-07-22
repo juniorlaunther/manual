@@ -43,10 +43,22 @@ export default function App() {
 
   const handleScroll = () => {
     if (carouselRef.current) {
-      const scrollPosition = carouselRef.current.scrollLeft;
-      const width = carouselRef.current.offsetWidth;
-      const newIndex = Math.round(scrollPosition / width);
-      setActiveIndex(newIndex);
+      const container = carouselRef.current;
+      const containerCenter = container.scrollLeft + container.offsetWidth / 2;
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      Array.from(container.children).forEach((child, index) => {
+        const childElement = child as HTMLElement;
+        const childCenter = (childElement.offsetLeft - container.offsetLeft) + childElement.offsetWidth / 2;
+        const distance = Math.abs(containerCenter - childCenter);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setActiveIndex(closestIndex);
     }
   };
 
@@ -55,8 +67,9 @@ export default function App() {
       const container = carouselRef.current;
       const child = container.children[index] as HTMLElement;
       if (child) {
+        const targetScrollLeft = (child.offsetLeft - container.offsetLeft) + child.offsetWidth / 2 - container.offsetWidth / 2;
         container.scrollTo({
-          left: child.offsetLeft - container.offsetLeft,
+          left: targetScrollLeft,
           behavior: 'smooth'
         });
       }
