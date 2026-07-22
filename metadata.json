@@ -1,0 +1,6 @@
+{
+  "name": "Manual de Prática do Desenho",
+  "description": "Landing page de vendas estilo sketch para o produto Manual de Prática do Desenho.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
