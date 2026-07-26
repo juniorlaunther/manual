@@ -299,7 +299,7 @@ export default function App() {
                <span className="text-[30px] font-bold text-[#436CC0] drop-shadow-sm">Por R$ 17,90</span>
             </div>
             
-            <a href="https://pay.hotmart.com/K106843927J" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-[#436CC0] hover:bg-[#325296] text-white text-lg md:text-xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 md:gap-3 animate-shine">
+            <a href="https://pay.hotmart.com/K106843927J?off=dbzlvckf&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-[#436CC0] hover:bg-[#325296] text-white text-lg md:text-xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 md:gap-3 animate-shine">
               <ShoppingCart className="w-6 h-6 shrink-0 animate-wiggle" />
               <span className="text-center leading-tight whitespace-nowrap">QUERO O MANUAL</span>
             </a>
@@ -379,7 +379,7 @@ export default function App() {
         </section>
 
         <div className="flex justify-center mb-14 px-2">
-          <a href="https://pay.hotmart.com/K106843927J" target="_blank" rel="noopener noreferrer" className="w-full max-w-sm bg-[#436CC0] hover:bg-[#325296] text-white text-xl md:text-2xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 animate-shine">
+          <a href="https://pay.hotmart.com/K106843927J?off=dbzlvckf&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="w-full max-w-sm bg-[#436CC0] hover:bg-[#325296] text-white text-xl md:text-2xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 animate-shine">
             <ShoppingCart className="w-6 h-6 shrink-0 animate-wiggle" />
             <span className="text-center leading-tight whitespace-nowrap">QUERO COMPRAR!</span>
           </a>
