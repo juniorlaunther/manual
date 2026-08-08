@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'motion/react';
 const faqs = [
   {
     icon: "✏️",
-    question: "Para quem é indicado o Manual de Prática do Desenho?",
+    question: "Para quem é indicado o Manual Para Desenhar?",
     answer: "O Manual é para pessoas de diferentes idades e níveis de experiência. Ele pode acompanhar tanto quem está começando quanto quem já desenha, deseja ampliar seu repertório, exercitar a criatividade ou voltar a praticar de maneira mais leve e frequente."
   },
   {
@@ -16,7 +16,7 @@ const faqs = [
   {
     icon: "📖",
     question: "O que vou encontrar dentro do Manual?",
-    answer: "Você encontrará referências para criar rostos, expressões, cabelos, corpos, poses, mãos, animais, alimentos, plantas, objetos, construções, mini cenários, personagens do folclore brasileiro, criaturas mágicas e muito mais. São diversas possibilidades para consultar, combinar, adaptar e criar desenhos do seu jeito."
+    answer: "Você encontrará referências para criar rostos expressivos, cabelos, corpos, animais, alimentos, plantas, objetos, construções, mini cenários, personagens do folclore brasileiro, criaturas mágicas e muito mais. São diversas possibilidades para consultar, combinar, adaptar e criar desenhos do seu jeito."
   },
   {
     icon: "🖨️",
@@ -32,15 +32,15 @@ const faqs = [
 
 
 const productImages = [
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTwZ5wxrmuzs-tgjtG4W0M9SDHx7L0bMtKSbKWEfr1E3leXFsQFUMO1TYuHG-op5wdk-dIj-HzN4Hap9xMcyruSy0t1iSz0OPGyO5BUrCo2rnjfz9CMhyphenhyphenCd-Z_8z1STM0liZXQ3jnO7tjz1PiJO-mAtxqsQDBzWaZhgkTl6jlEtUuUlMwJaCPx3nx48lk/w512-h640/01%20(1).jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6_jfq5kmgki5bzjeL6sgkHfsMGrBtcf68VEwzFdlRK24uoasd05k7k5oOf2aq3zzN53fDhCSn2paTfySMqFRO6dxH_tUNyEdbTv75gni3ZQq6jXkbZS2sSgPqErTZenC1coO3JtrHrvE1VzqVMNmq0Wy0G1xuirGx93jpKeNEfKrY9VTzqoJ3CofmdOc/w512-h640/01%20(2).jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIog6xCQWGyK40VXN-CkPj_kU7i-aUZqcIP41ESMVpFhSsXB3Bq618AzutNo_aOPeizX3it0819nD-t149HBFSy_Wx2lvspx-HxevvfbnFS1SiWD73sB3WeTBFOaLUm294nLmxX06AbparkfE0JMEGBmcotPyFseTOaurE9016MiRG0M0Ts25cZmSeuQU/w512-h640/01%20(3).jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh88QY4gLx5x52xrta2pEjiuzqKuA4RKlfc7yApgss_uBsT83lsv8tdAMwuIwpeLgPGOLW57piX4YocqBrwLRBJm3iWvE0KilgZtEarNasKqiXR6Z1nRIxP4up24IdcFfM58laH2EG4QKNlwjLP0n7kni1lKEdEInEKvmZMJOCKQD62K-3K4oAB4SI1MWw/w512-h640/01%20(4).jpeg",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8S_h9pIniS8gNsqTld92VBRBKLPGbbSpGtOGYWl50H54hOfIlQEfWca2ofT1MrYNADov6R_Ev4x4eu1_AZX4gbgPtPOc74EyIsttvsNaU22ofF6K895dXe_fqzZPolV9RozJoLmbLbOs67xDnfkRNxko-j3dQKC0CtJVupEpevlwdsQMRMI7qbbvphPQ/w480-h640/imagem%2001.png",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg19yM0EqvYrWcuKI28LWe4sQKJvUJ8MDbogaCkkki2VJuxWXMzw5v_KdWMmcuFlWc4jsV39QmBeYlcvUKfh7YTh5VlaiUIhbMX0YIKz09gbbuq_q_7lUh-0_ax_hfZBAlKVNkk1z5bWtT_wh4YPBHdH6LjKc-piJSbOfeZdsnhqtQRhEGmAOG4CSEFGWo/w480-h640/imagem%2002.png",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQMVv0GRWHOEBrbEuvfVVQEkum2h7kpNZbScWX36cCCLi4Bl7Xj0dtFUQ3R6tRAsZxQy0y4MVAzaleml85LLsmGk1rK9vIWNBV4PagF4Hw3L5P9PfUHCXnWdYUfYr4VpuprF8_mZwV-etGDRt5eHwi9iaphSu129NGJ6eKOjateQSCrigxWeW2hGqIDZ4/w480-h640/imagem%2003.png",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW17L4JjfW2Kjs4giP2wZT8d1gLfKUAtr_MTdFFIjIJo04NhNgOz0hyphenhyphentYZbbhRp_fCiODAbupBSMbJvnzJ441zer57-y8EghuUUcddSEKlhvqJrNEP3vsN4ICIDs2wHE5GhIwP7-iAgcxjBAR9RgWANiKHrWANmhddSmRx66JhHJd727JKfiCPuyxgGs4/w480-h640/imagem%2004.png",
 ];
 
 const testimonialImages = [
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEBFMLMSa5m-8OeixCKUUJvVWRq9nsWBWNkXK_nvIk9v3rSq1t_JASum3E9X8v8i4_v1uVcwUlXSdsPS0dqmpJ10_A7Q_9wI3KWGJiscicoRkIbFxK-sHbEoES1zKdoroLSAXn7BHC48Z2YQQJTdsqy_lwLw1M1Zkgfzing-m-0SNijWKey8QtjNKJbKc/w480-h640/Depoimento%2001.jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIiIn3ZH_ToS9qsCBAi9mZPAb8niDOY5R0DMiBo1dDSIQ6wA8WoHYXokokr12tlMBLBWd1QUEJeI2CLHI2SloNtYFiuBWA6ZhecykYZUfcyQfqeUnxn4_2Lq_01uQSK5y9zca4Eq_s_oSqCX38ORhOQ1StCdhGXuLNGdY9Ktha7j1Lxox4Ht6hvJY8WlQ/w480-h640/novo%2002.jpeg",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCvoBnivvMhr34UZCtTZ8j32CJJI1fYcb1hM8DaxlxBQ_x48tCHhRN09PKQOXgTA14J4z00Xos4_BzvCWp-zuvZ3NjuvvbqOrCaK6rhVGzCj2rrXWa1zP_a-09Jye5OgBX6Weqwad8F1GGkv20GWaZkEV1mRImH8vFdeadMM0vBD7duI3kjk0m1WPSr9k/w480-h640/depoimento%20novo.jpeg",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhH7rBkGRoI88b35WpW_kIgK4NykmOLcZFWccNdmhI8sXTKTXe_TM0i_kMfM-xYkQd6VHQZbCvul7BWcuun4en1B_ACJWzIDuDUwOnw3tJ5VZDw3ovs_kgGOg5cZR1Zj3cw9XRs1ggGLjLce_9_vQxD1hIJqwkV_b8dStzJuPlayWoM0danJRS-zf21YtA/w480-h640/depoimento%20novo2.jpeg",
   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf-3KBC8LsMWMM-PBre2O8J_ubHJQ95LR1PH4NREqCdylJKKraf1vVS1X0b66mYjfqjOHgj5BWadsA9SsdCI23AL2TpkyFHpmeixmh8JlD1t8Oo6WhL8l760p3yoOp4lLRvbkPCRllN1wP2xOudfBvG7PgMTd-Se1bz4rjWqMgC4XHasLe_hmL9U7tZoQ/w480-h640/Depoimento%2002.jpeg",
   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXlv3_qs8Nz04hBEb5iU9ZphXd-UTYli0FsD9AJqCD9epzklTrFrfDp-Fvf52ZmjAdI4IMfVCrBc2GcSHXVAx96Fbe_rZ1uFGci1UnhqmVu5jD9-wqfXLqVfqu3_4HWVr0_e8dzmwIgucTgFzeYrvCXh7bp5r_u_TbHiZtswDFx9oXWKkuHF7nmEsHaSk/w480-h640/Depoimento%2003.jpeg"
 ];
@@ -52,6 +52,52 @@ export default function App() {
   const [direction, setDirection] = useState(0);
   const [purchaseNotification, setPurchaseNotification] = useState<string | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [checkoutUrl, setCheckoutUrl] = useState("https://pay.hotmart.com/K106843927J?off=dbzlvckf&checkoutMode=10");
+
+  useEffect(() => {
+    const checkoutBaseUrl = "https://pay.hotmart.com/K106843927J?off=dbzlvckf&checkoutMode=10";
+    const allowedParams = [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_content",
+      "utm_term",
+      "utm_id",
+      "sck"
+    ];
+
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const storedParamsRaw = sessionStorage.getItem("manual_utm_params");
+      let storedParams = storedParamsRaw ? JSON.parse(storedParamsRaw) : {};
+      
+      const hasAnyAllowedParam = allowedParams.some(param => urlParams.has(param) && urlParams.get(param));
+
+      if (hasAnyAllowedParam) {
+        storedParams = {};
+        allowedParams.forEach(param => {
+          if (urlParams.has(param)) {
+            const val = urlParams.get(param);
+            if (val) {
+              storedParams[param] = val;
+            }
+          }
+        });
+        sessionStorage.setItem("manual_utm_params", JSON.stringify(storedParams));
+      }
+
+      const newCheckoutUrl = new URL(checkoutBaseUrl);
+      allowedParams.forEach(key => {
+        if (storedParams[key]) {
+          newCheckoutUrl.searchParams.set(key, storedParams[key]);
+        }
+      });
+
+      setCheckoutUrl(newCheckoutUrl.toString());
+    } catch (e) {
+      console.error("Error setting UTM params", e);
+    }
+  }, []);
   
   const carouselRef = useRef<HTMLDivElement>(null);
   const testimonialRef = useRef<HTMLDivElement>(null);
@@ -199,7 +245,7 @@ export default function App() {
   }, [lightboxData]);
 
   return (
-    <div className="min-h-screen pb-20 selection:bg-[#436CC0] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen pb-20 selection:bg-[#A505F1] selection:text-white overflow-x-hidden">
       {/* Lightbox Overlay */}
       <AnimatePresence>
         {lightboxData !== null && (() => {
@@ -311,7 +357,7 @@ export default function App() {
       {/* Header with Logo */}
       <header className="pt-6 pb-4 px-4 flex justify-center items-center">
         <img 
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT_R15Ule3FGTSFBKYbPFLo0f49CQ8mERGjiQLx4_wZ6HAm7El8ExQFfaHkkAhQ7AVVcYXrvlQkSLQnkFpmK7xqIGq7p-5f4t0I5fzvzeuWqW3Iri1zo4f83B_SNLWec68IvqPGs732Lun7Jj-SmLXFJro0u9VEeA24b14bau1KR1ltq18hnpOv_-WzIc/s1600/logo%20sem%20fundo.png" 
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8C3OKIhb0q4pDJlULfaOj3wLDKu0WQTQ08GXLpaiUMmQ8ms4bq3lZfCYv8orbuye6SRNkJr3yO0KEuiMoFQrs3khDhmpw388FhyphenhyphenLGPtOvtTLXDwqF8fH7tbOrsUsrBpHuWaxWFD8NGiCID12D6iLuSgYMRSr3R09bEDAdxq4n_iWnkDYbK7aDR2mPOHM/w400-h215/nova%20logo%20manual%20transparente.png" 
           alt="Manual de Prática do Desenho" 
           className="max-h-28 md:max-h-40 object-contain drop-shadow-md animate-scale-soft"
         />
@@ -329,7 +375,7 @@ export default function App() {
               {productImages.map((url, i) => (
                <div key={i} className="w-[85vw] max-w-[280px] md:w-full md:max-w-none shrink-0 snap-center mx-auto flex justify-center relative hover:z-10">
                   <div 
-                    className={`bg-white p-2 md:p-3 border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#436CC0] rounded-xl w-full transition-transform duration-300 hover:scale-105 cursor-pointer ${i % 2 === 0 ? 'rotate-1 hover:rotate-2' : '-rotate-1 hover:-rotate-2'}`}
+                    className={`bg-white p-2 md:p-3 border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#A505F1] rounded-xl w-full transition-transform duration-300 hover:scale-105 cursor-pointer ${i % 2 === 0 ? 'rotate-1 hover:rotate-2' : '-rotate-1 hover:-rotate-2'}`}
                     onClick={() => setLightboxData({ index: i, type: 'product' })}
                   >
                     <img 
@@ -350,7 +396,7 @@ export default function App() {
                  key={i} 
                  onClick={() => scrollToImage(i)}
                  aria-label={`Ver imagem ${i + 1}`}
-                 className={`w-3 h-3 rounded-full border-2 border-[#2c2c2c] cursor-pointer transition-colors ${activeIndex === i ? 'bg-[#436CC0]' : 'bg-transparent'}`}
+                 className={`w-3 h-3 rounded-full border-2 border-[#2c2c2c] cursor-pointer transition-colors ${activeIndex === i ? 'bg-[#A505F1]' : 'bg-transparent'}`}
                />
              ))}
            </div>
@@ -358,7 +404,7 @@ export default function App() {
 
         {/* Short Description & Buy Section */}
         <section className="mb-10 bg-[#F4E285] p-5 md:p-8 rounded-3xl border-4 border-[#2c2c2c] shadow-[6px_6px_0px_0px_#2c2c2c] -rotate-1 relative z-10 max-w-3xl mx-auto">
-          <div className="flex items-center justify-center gap-1 mb-3 text-[#436CC0]">
+          <div className="flex items-center justify-center gap-1 mb-3 text-[#A505F1]">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="fill-current w-5 h-5 md:w-6 md:h-6 animate-scale-pulse" style={{ animationDelay: `${i * 100}ms` }} />
             ))}
@@ -369,16 +415,16 @@ export default function App() {
           </h1>
           
           <p className="text-lg md:text-xl mb-6 opacity-90 text-center md:text-left">
-            Escolha formas, olhos, bocas, cabelos, poses, flores, animais e dezenas de outros elementos para montar personagens e ilustrações únicas, mesmo quando você não souber o que desenhar.
+            Escolha formas, olhos, bocas, orelhas, cabelos, flores, animais e dezenas de outros elementos para criar ilustrações únicas, mesmo quando você não souber o que desenhar.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-5 bg-white/50 p-4 rounded-2xl border-2 border-[#2c2c2c] border-dashed">
             <div className="flex flex-col items-center md:items-start shrink-0">
                <span className="line-through text-gray-500 text-[19px] font-bold">De R$ 49,00</span>
-               <span className="text-[30px] font-bold text-[#436CC0] drop-shadow-sm">Por R$ 17,90</span>
+               <span className="text-[30px] font-bold text-[#A505F1] drop-shadow-sm">Por R$ 17,90</span>
             </div>
             
-            <a href="https://pay.hotmart.com/K106843927J?off=dbzlvckf&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-[#436CC0] hover:bg-[#325296] text-white text-lg md:text-xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 md:gap-3 animate-shine">
+            <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-[#A505F1] hover:bg-[#8204BE] text-white text-lg md:text-xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 md:gap-3 animate-shine">
               <ShoppingCart className="w-6 h-6 shrink-0 animate-wiggle" />
               <span className="text-center leading-tight whitespace-nowrap">QUERO O MANUAL</span>
             </a>
@@ -387,55 +433,59 @@ export default function App() {
 
         {/* Long Description */}
         <section className="mb-10 space-y-8 max-w-3xl mx-auto">
-          <div className="bg-white p-5 md:p-8 rounded-3xl border-4 border-[#2c2c2c] shadow-[6px_6px_0px_0px_#F0B7B7] rotate-1">
+          <div className="bg-white p-5 md:p-8 rounded-3xl border-4 border-[#2c2c2c] shadow-[6px_6px_0px_0px_#436CC0] rotate-1">
             <h2 className="text-2xl md:text-3xl font-bold mb-5 flex items-center gap-3">
-              <span className="bg-[#F0B7B7] p-2 rounded-xl border-4 border-[#2c2c2c] shadow-[2px_2px_0px_0px_#2c2c2c] animate-wiggle inline-block">🤔</span> 
+              <span className="bg-[#436CC0] p-2 rounded-xl border-4 border-[#2c2c2c] shadow-[2px_2px_0px_0px_#2c2c2c] animate-wiggle inline-block">🤔</span> 
               Para quem é este manual?
             </h2>
             <ul className="space-y-4 text-lg md:text-xl">
               <li className="flex items-start gap-3">
-                <ArrowRight className="w-6 h-6 text-[#436CC0] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '0ms' }} />
-                <span>Quem gosta de desenhar, mas trava diante da folha em branco.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <ArrowRight className="w-6 h-6 text-[#436CC0] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '100ms' }} />
-                <span>Para quem quer criar personagens sem precisar inventar cada detalhe do zero.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <ArrowRight className="w-6 h-6 text-[#436CC0] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '200ms' }} />
+                <ArrowRight className="w-6 h-6 text-[#A505F1] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '0ms' }} />
                 <span>Crianças, adolescentes e adultos que desejam explorar a criatividade de forma leve e divertida.</span>
               </li>
               <li className="flex items-start gap-3">
-                <ArrowRight className="w-6 h-6 text-[#436CC0] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '300ms' }} />
-                <span>Iniciantes que procuram desenhos simples e fáceis de observar e reproduzir.</span>
+                <ArrowRight className="w-6 h-6 text-[#A505F1] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '100ms' }} />
+                <span>Quem gosta de desenhar, mas trava diante da folha em branco.</span>
               </li>
               <li className="flex items-start gap-3">
-                <ArrowRight className="w-6 h-6 text-[#436CC0] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '400ms' }} />
+                <ArrowRight className="w-6 h-6 text-[#A505F1] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '200ms' }} />
+                <span>Para quem quer criar ilustrações sem precisar inventar cada detalhe do zero.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <ArrowRight className="w-6 h-6 text-[#A505F1] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '300ms' }} />
+                <span>Aqueles que procuram desenhos simples e fáceis de observar e reproduzir.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <ArrowRight className="w-6 h-6 text-[#A505F1] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '400ms' }} />
                 <span>Para quem quer ter uma biblioteca de referências sempre disponível.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <ArrowRight className="w-6 h-6 text-[#A505F1] shrink-0 mt-1 animate-slide-x" style={{ animationDelay: '500ms' }} />
+                <span>Para quem conduz aulas, oficinas ou encontros criativos e busca uma proposta diferente para alunos ou grupos.</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-[#F4EDE3] p-5 md:p-8 rounded-3xl border-4 border-[#2c2c2c] border-dashed shadow-[6px_6px_0px_0px_#436CC0] -rotate-1">
+          <div className="bg-[#F4EDE3] p-5 md:p-8 rounded-3xl border-4 border-[#2c2c2c] border-dashed shadow-[6px_6px_0px_0px_#A505F1] -rotate-1">
             <h2 className="text-2xl md:text-3xl font-bold mb-5 flex items-center gap-3">
-              <PenTool className="w-8 h-8 text-[#436CC0] animate-wiggle" />
-              O que você vai aprender?
+              <PenTool className="w-8 h-8 text-[#A505F1] animate-wiggle" />
+              O que você vai receber?
             </h2>
             <p className="text-lg md:text-xl mb-5">
-              Este não é um livro cheio de teoria ou desenhos prontos para copiar por inteiro. É uma biblioteca visual de formas e elementos que você pode combinar para criar seus próprios desenhos.
+              Este não é um livro com teorias mirabolantes! A idéia é simples: Fazer você destravar sua criatividade e desenhar lindas ilustrações. O livro funciona como uma biblioteca visual cheia de elementos e ilustrações para você combinar e/ou copiar.
             </p>
             <ul className="space-y-4 text-lg md:text-xl mb-4">
               <li className="flex items-start gap-3">
                 <span className="w-8 h-8 shrink-0 flex items-center justify-center bg-[#F4E285] border-2 border-[#2c2c2c] rounded-full font-bold text-base shadow-[2px_2px_0px_0px_#2c2c2c] animate-float" style={{ animationDelay: '0ms' }}>1</span>
-                <span>Centenas de olhos, bocas, cabelos, formas, animais e elementos para consultar.</span>
+                <span>Centenas de olhos, bocas, narizes, cabelos, corpos, animais, animais mágicos, e muito mais!</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-8 h-8 shrink-0 flex items-center justify-center bg-[#F0B7B7] border-2 border-[#2c2c2c] rounded-full font-bold text-base shadow-[2px_2px_0px_0px_#2c2c2c] animate-float" style={{ animationDelay: '200ms' }}>2</span>
-                <span>Referências que podem ser misturadas para criar desenhos completamente diferentes.</span>
+                <span className="w-8 h-8 shrink-0 flex items-center justify-center bg-[#436CC0] text-white border-2 border-[#2c2c2c] rounded-full font-bold text-base shadow-[2px_2px_0px_0px_#2c2c2c] animate-float" style={{ animationDelay: '200ms' }}>2</span>
+                <span>Um desafio de "Histórinha em Quadrinho" para você criar a sua própria!</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-8 h-8 shrink-0 flex items-center justify-center bg-[#436CC0] text-white border-2 border-[#2c2c2c] rounded-full font-bold text-base shadow-[2px_2px_0px_0px_#2c2c2c] animate-float" style={{ animationDelay: '400ms' }}>3</span>
-                <span>Um jeito simples e divertido de transformar a folha em branco em novas ideias.</span>
+                <span className="w-8 h-8 shrink-0 flex items-center justify-center bg-[#A505F1] text-white border-2 border-[#2c2c2c] rounded-full font-bold text-base shadow-[2px_2px_0px_0px_#2c2c2c] animate-float" style={{ animationDelay: '400ms' }}>3</span>
+                <span>Um jeito simples e prático para transformar folhas em branco em novas ideias.</span>
               </li>
             </ul>
           </div>
@@ -444,9 +494,9 @@ export default function App() {
         {/* Video Placeholder */}
         <section className="mb-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-[#2c2c2c]">Veja o Manual em mãos!</h2>
-          <div className="relative bg-white border-4 border-[#2c2c2c] rounded-3xl p-3 shadow-[8px_8px_0px_0px_#F0B7B7] rotate-1 max-w-sm mx-auto">
+          <div className="relative bg-white border-4 border-[#2c2c2c] rounded-3xl p-3 shadow-[8px_8px_0px_0px_#436CC0] rotate-1 max-w-sm mx-auto">
             <img 
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-5hZ_m1Lfs7LxecB6yuRMsS1Gg5HTpD3QabN60g_B7Oub_NI_vPwtafw7Cex2BkuXzYIJfAc5YL-plgQlDK1G1SvnNvboxeiM28vkpVT5AXTaNO-CV_TxkGrDbs_oTmg7Gkt7NzAU6AI2L5IWUkLKqXt2rUI0n0MTiPY3hA-MPIxGQeyASkE02d9ZO3c/w480-h640/IMG_5804.gif" 
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEge-bYBSyOazpnBOFwSAL6YXSSbnRKwcfufY3gy02kb8_ZVTQX4PTJ-mgCySkXfF4m2o7_sN0unc9R0tN-EiBCoRnw5Tt2K6vSlVmc9ng_45lg3iJCXwFU6OsQCeSRUEfs2OddZ-FrfV_OqzWER9mtxPuwWsd4g5hyphenhyphenSzCWmcqkRKrn4NKu3UGNz1G7R0hQ/s0/novo%20gif%20manual%20(reduzindo).gif" 
               alt="Manual por dentro" 
               className="w-full aspect-[3/4] object-cover border-4 border-dashed border-[#2c2c2c] rounded-2xl" 
             />
@@ -458,7 +508,7 @@ export default function App() {
         </section>
 
         <div className="flex justify-center mb-14 px-2">
-          <a href="https://pay.hotmart.com/K106843927J?off=dbzlvckf&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="w-full max-w-sm bg-[#436CC0] hover:bg-[#325296] text-white text-xl md:text-2xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 animate-shine">
+          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full max-w-sm bg-[#A505F1] hover:bg-[#8204BE] text-white text-xl md:text-2xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 animate-shine">
             <ShoppingCart className="w-6 h-6 shrink-0 animate-wiggle" />
             <span className="text-center leading-tight whitespace-nowrap">QUERO COMPRAR!</span>
           </a>
@@ -480,7 +530,7 @@ export default function App() {
                 {testimonialImages.map((url, i) => (
                  <div key={i} className="w-[85vw] max-w-[280px] md:w-full md:max-w-none shrink-0 snap-center mx-auto flex justify-center relative hover:z-10">
                     <div 
-                      className={`bg-white p-2 md:p-3 border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#436CC0] rounded-xl w-full transition-transform duration-300 hover:scale-105 cursor-pointer ${i % 2 === 0 ? 'rotate-1 hover:rotate-2' : '-rotate-1 hover:-rotate-2'}`}
+                      className={`bg-white p-2 md:p-3 border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#A505F1] rounded-xl w-full transition-transform duration-300 hover:scale-105 cursor-pointer ${i % 2 === 0 ? 'rotate-1 hover:rotate-2' : '-rotate-1 hover:-rotate-2'}`}
                       onClick={() => setLightboxData({ index: i, type: 'testimonial' })}
                     >
                       <img 
@@ -501,7 +551,7 @@ export default function App() {
                    key={i} 
                    onClick={() => scrollToTestimonialImage(i)}
                    aria-label={`Ver depoimento ${i + 1}`}
-                   className={`w-3 h-3 rounded-full border-2 border-[#2c2c2c] cursor-pointer transition-colors ${activeTestimonialIndex === i ? 'bg-[#436CC0]' : 'bg-transparent'}`}
+                   className={`w-3 h-3 rounded-full border-2 border-[#2c2c2c] cursor-pointer transition-colors ${activeTestimonialIndex === i ? 'bg-[#A505F1]' : 'bg-transparent'}`}
                  />
                ))}
              </div>
@@ -511,7 +561,7 @@ export default function App() {
         {/* Guarantee */}
 
         <section className="mb-10">
-           <div className="bg-[#436CC0] text-white p-6 md:p-10 rounded-[2rem] border-4 border-[#2c2c2c] shadow-[8px_8px_0px_0px_#2c2c2c] flex flex-col md:flex-row items-center gap-6 md:gap-10 relative overflow-hidden">
+           <div className="bg-[#A505F1] text-white p-6 md:p-10 rounded-[2rem] border-4 border-[#2c2c2c] shadow-[8px_8px_0px_0px_#2c2c2c] flex flex-col md:flex-row items-center gap-6 md:gap-10 relative overflow-hidden">
              <div className="absolute top-0 right-0 w-48 h-48 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
              <ShieldCheck className="w-20 h-20 md:w-24 md:h-24 shrink-0 relative z-10 animate-scale-pulse" />
              <div className="relative z-10 text-center md:text-left">
@@ -537,7 +587,7 @@ export default function App() {
                     <span className="text-2xl md:text-3xl animate-wiggle inline-block shrink-0">{faq.icon}</span>
                     <span className="leading-tight text-gray-800">{faq.question}</span>
                   </span>
-                  <ChevronDown className={`w-6 h-6 shrink-0 text-[#436CC0] transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-6 h-6 shrink-0 text-[#A505F1] transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
                   {openFaqIndex === index && (
@@ -562,7 +612,7 @@ export default function App() {
         <section className="mb-14 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#2c2c2c]">Pronto para desenhar?</h2>
           <div className="flex justify-center px-2">
-            <a href="https://pay.hotmart.com/K106843927J?off=dbzlvckf&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="w-full max-w-sm bg-[#436CC0] hover:bg-[#325296] text-white text-xl md:text-2xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 animate-shine">
+            <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full max-w-sm bg-[#A505F1] hover:bg-[#8204BE] text-white text-xl md:text-2xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 animate-shine">
               <ShoppingCart className="w-6 h-6 shrink-0 animate-wiggle" />
               <span className="text-center leading-tight whitespace-nowrap">QUERO MEU MANUAL</span>
             </a>
@@ -587,7 +637,7 @@ export default function App() {
 
         <div className="flex justify-center mb-6 mt-8">
           <img 
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT_R15Ule3FGTSFBKYbPFLo0f49CQ8mERGjiQLx4_wZ6HAm7El8ExQFfaHkkAhQ7AVVcYXrvlQkSLQnkFpmK7xqIGq7p-5f4t0I5fzvzeuWqW3Iri1zo4f83B_SNLWec68IvqPGs732Lun7Jj-SmLXFJro0u9VEeA24b14bau1KR1ltq18hnpOv_-WzIc/s1600/logo%20sem%20fundo.png" 
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8C3OKIhb0q4pDJlULfaOj3wLDKu0WQTQ08GXLpaiUMmQ8ms4bq3lZfCYv8orbuye6SRNkJr3yO0KEuiMoFQrs3khDhmpw388FhyphenhyphenLGPtOvtTLXDwqF8fH7tbOrsUsrBpHuWaxWFD8NGiCID12D6iLuSgYMRSr3R09bEDAdxq4n_iWnkDYbK7aDR2mPOHM/w400-h215/nova%20logo%20manual%20transparente.png" 
             alt="Manual de Prática do Desenho" 
             className="h-16 md:h-20 object-contain drop-shadow-sm opacity-80 hover:opacity-100 transition-opacity"
           />
