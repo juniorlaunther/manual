@@ -567,7 +567,7 @@ export default function App() {
              <div className="relative z-10 text-center md:text-left">
                <h3 className="text-2xl md:text-3xl font-bold mb-3">Garantia de 7 Dias</h3>
                <p className="text-lg md:text-xl opacity-90 leading-relaxed">
-                 Se você achar que este manual não te ajudou a melhorar seus traços, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.
+                 Se você achar que este manual não te ajudou a destravar sua criatividade, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.
                </p>
              </div>
            </div>
