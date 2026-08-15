@@ -40,8 +40,11 @@ const productImages = [
 
 const testimonialImages = [
   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCvoBnivvMhr34UZCtTZ8j32CJJI1fYcb1hM8DaxlxBQ_x48tCHhRN09PKQOXgTA14J4z00Xos4_BzvCWp-zuvZ3NjuvvbqOrCaK6rhVGzCj2rrXWa1zP_a-09Jye5OgBX6Weqwad8F1GGkv20GWaZkEV1mRImH8vFdeadMM0vBD7duI3kjk0m1WPSr9k/w480-h640/depoimento%20novo.jpeg",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOwQE2Mk7-4rCWo_VSL5sE2r8IwynP6V-ku1d6pZbb0eIjX364L3e9R17KVS0iYD0m7heqBl2mAr-677pMzstZbAfcqw2M2ctPOqc5GrJonC2_Fm0KtP1G0ZR0796jJzIo_BmDHmkO6Wl1pXuq1Dp0K_5JcRw0iDaiiKx71-owbsgIY3pshHHQs-KGnaI/w480-h640/novo%20depo%2001.jpeg",
   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhH7rBkGRoI88b35WpW_kIgK4NykmOLcZFWccNdmhI8sXTKTXe_TM0i_kMfM-xYkQd6VHQZbCvul7BWcuun4en1B_ACJWzIDuDUwOnw3tJ5VZDw3ovs_kgGOg5cZR1Zj3cw9XRs1ggGLjLce_9_vQxD1hIJqwkV_b8dStzJuPlayWoM0danJRS-zf21YtA/w480-h640/depoimento%20novo2.jpeg",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoLtgbb9XihDzyG2hgfHfB4M5y5zh5l76fa5NCroruysp1aMeycccyHphNiJD1YZpsa6gwMcUa74Ia38IGv5T4CE-tuxsGxBdtEVCiArzQsxGK6l7rU5VuFQgPXbQKkhCiLZAdUO9h1CBEq6-IcFdLEgaaS8pu8gqGncu-fr-f-JFvl2amoxpYMv4nq6o/w480-h640/novo%20depo%2002.jpeg",
   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf-3KBC8LsMWMM-PBre2O8J_ubHJQ95LR1PH4NREqCdylJKKraf1vVS1X0b66mYjfqjOHgj5BWadsA9SsdCI23AL2TpkyFHpmeixmh8JlD1t8Oo6WhL8l760p3yoOp4lLRvbkPCRllN1wP2xOudfBvG7PgMTd-Se1bz4rjWqMgC4XHasLe_hmL9U7tZoQ/w480-h640/Depoimento%2002.jpeg",
+  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNoZZDeLwtOl3vBuqQXtk4LBoBFRhtuoJvxl1eOE9YTm4bDcTjyO-GbFWamYG9TgsAWeCe8s4zQHBI71NrnYIyuVpwsUMSJUKVQVxTgTdIpeeoyz_oLHv_FwgfSHusA_SdL-i6fByJr1o7wJ_FiHB1kdOIQHOuLoToklRB92ELkvj_PCcuKCw8pqXFtRw/w480-h640/novo%20depo%2003.jpeg",
   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXlv3_qs8Nz04hBEb5iU9ZphXd-UTYli0FsD9AJqCD9epzklTrFrfDp-Fvf52ZmjAdI4IMfVCrBc2GcSHXVAx96Fbe_rZ1uFGci1UnhqmVu5jD9-wqfXLqVfqu3_4HWVr0_e8dzmwIgucTgFzeYrvCXh7bp5r_u_TbHiZtswDFx9oXWKkuHF7nmEsHaSk/w480-h640/Depoimento%2003.jpeg"
 ];
 
@@ -420,8 +423,8 @@ export default function App() {
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-5 bg-white/50 p-4 rounded-2xl border-2 border-[#2c2c2c] border-dashed">
             <div className="flex flex-col items-center md:items-start shrink-0">
-               <span className="line-through text-gray-500 text-[19px] font-bold">De R$ 49,00</span>
-               <span className="text-[30px] font-bold text-[#A505F1] drop-shadow-sm">Por R$ 17,90</span>
+               <span className="line-through text-gray-500 text-[19px] font-bold">De R$ 67,00</span>
+               <span className="text-[30px] font-bold text-[#A505F1] drop-shadow-sm">Por R$ 24,90</span>
             </div>
             
             <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-[#A505F1] hover:bg-[#8204BE] text-white text-lg md:text-xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 md:gap-3 animate-shine">
@@ -488,6 +491,19 @@ export default function App() {
                 <span>Um jeito simples e prático para transformar folhas em branco em novas ideias.</span>
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* Updates Highlight */}
+        <section className="mb-10 max-w-3xl mx-auto">
+          <div className="bg-[#FFD700] p-6 rounded-3xl border-4 border-[#2c2c2c] shadow-[6px_6px_0px_0px_#2c2c2c] flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left animate-shine rotate-1 hover:-rotate-1 transition-transform">
+            <span className="text-5xl md:text-6xl animate-wiggle inline-block shrink-0 drop-shadow-sm">⭐</span>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#2c2c2c] mb-1">Atualizações Vitalícias!!!</h3>
+              <p className="text-lg md:text-xl text-[#2c2c2c] opacity-90 font-medium leading-tight">
+                Você receberá todas novas versões do Manual de maneira gratuita.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -643,8 +659,9 @@ export default function App() {
           />
         </div>
 
-        <p className="mt-4">© {new Date().getFullYear()} Manual de Prática do Desenho.</p>
-        <p>Todos os direitos reservados.</p>
+        <p className="mt-4">© 2026 Manual Para Desenhar - Biblioteca de Ilustrações</p>
+        <p>Todos os direitos reservados - Ateliê do Ju</p>
+        <p>CNPJ 51.041.767/0001-08</p>
       </footer>
 
       {/* Fake Purchase Notification */}
