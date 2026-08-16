@@ -414,7 +414,7 @@ export default function App() {
           </div>
           
           <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-tight text-center md:text-left">
-            Um Manual para Destravar Sua Criatividade e Criar Desenhos do Seu Jeito
+            Um Manual Personalizado para Destravar Sua Criatividade e Criar Desenhos do Seu Jeito
           </h1>
           
           <p className="text-lg md:text-xl mb-6 opacity-90 text-center md:text-left">
@@ -423,14 +423,27 @@ export default function App() {
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-5 bg-white/50 p-4 rounded-2xl border-2 border-[#2c2c2c] border-dashed">
             <div className="flex flex-col items-center md:items-start shrink-0">
-               <span className="line-through text-gray-500 text-[19px] font-bold">De R$ 58,00</span>
-               <span className="text-[30px] font-bold text-[#A505F1] drop-shadow-sm">Por R$ 19,90</span>
+               <span className="line-through text-gray-500 text-[19px] font-bold">De R$ 67,00</span>
+               <span className="text-[30px] font-bold text-[#A505F1] drop-shadow-sm">Por R$ 24,90</span>
             </div>
             
             <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-[#A505F1] hover:bg-[#8204BE] text-white text-lg md:text-xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 md:gap-3 animate-shine">
               <ShoppingCart className="w-6 h-6 shrink-0 animate-wiggle" />
               <span className="text-center leading-tight whitespace-nowrap">QUERO O MANUAL</span>
             </a>
+          </div>
+        </section>
+
+        {/* Updates Highlight */}
+        <section className="mb-10 max-w-3xl mx-auto">
+          <div className="bg-[#FFD700] p-6 rounded-3xl border-4 border-[#2c2c2c] shadow-[6px_6px_0px_0px_#2c2c2c] flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left animate-shine rotate-1 hover:-rotate-1 transition-transform">
+            <span className="text-5xl md:text-6xl animate-wiggle inline-block shrink-0 drop-shadow-sm">⭐</span>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#2c2c2c] mb-1">Atualizações Vitalícias!!!</h3>
+              <p className="text-lg md:text-xl text-[#2c2c2c] opacity-90 font-medium leading-tight">
+                Você receberá todas novas atualizações do Manual <strong>gratuitamente</strong>.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -491,19 +504,6 @@ export default function App() {
                 <span>Um jeito simples e prático para transformar folhas em branco em novas ideias.</span>
               </li>
             </ul>
-          </div>
-        </section>
-
-        {/* Updates Highlight */}
-        <section className="mb-10 max-w-3xl mx-auto">
-          <div className="bg-[#FFD700] p-6 rounded-3xl border-4 border-[#2c2c2c] shadow-[6px_6px_0px_0px_#2c2c2c] flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left animate-shine rotate-1 hover:-rotate-1 transition-transform">
-            <span className="text-5xl md:text-6xl animate-wiggle inline-block shrink-0 drop-shadow-sm">⭐</span>
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#2c2c2c] mb-1">Atualizações Vitalícias!!!</h3>
-              <p className="text-lg md:text-xl text-[#2c2c2c] opacity-90 font-medium leading-tight">
-                Você receberá todas novas versões do Manual de maneira gratuita.
-              </p>
-            </div>
           </div>
         </section>
 
