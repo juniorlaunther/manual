@@ -423,8 +423,8 @@ export default function App() {
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-5 bg-white/50 p-4 rounded-2xl border-2 border-[#2c2c2c] border-dashed">
             <div className="flex flex-col items-center md:items-start shrink-0">
-               <span className="line-through text-gray-500 text-[19px] font-bold">De R$ 67,00</span>
-               <span className="text-[30px] font-bold text-[#A505F1] drop-shadow-sm">Por R$ 24,90</span>
+               <span className="line-through text-gray-500 text-[19px] font-bold">De R$ 58,00</span>
+               <span className="text-[30px] font-bold text-[#A505F1] drop-shadow-sm">Por R$ 19,90</span>
             </div>
             
             <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-[#A505F1] hover:bg-[#8204BE] text-white text-lg md:text-xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 md:gap-3 animate-shine">
