@@ -66,7 +66,8 @@ export default function App() {
       "utm_content",
       "utm_term",
       "utm_id",
-      "sck"
+      "sck",
+      "xcod"
     ];
 
     try {
