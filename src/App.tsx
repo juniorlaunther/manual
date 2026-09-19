@@ -32,20 +32,20 @@ const faqs = [
 
 
 const productImages = [
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8S_h9pIniS8gNsqTld92VBRBKLPGbbSpGtOGYWl50H54hOfIlQEfWca2ofT1MrYNADov6R_Ev4x4eu1_AZX4gbgPtPOc74EyIsttvsNaU22ofF6K895dXe_fqzZPolV9RozJoLmbLbOs67xDnfkRNxko-j3dQKC0CtJVupEpevlwdsQMRMI7qbbvphPQ/w480-h640/imagem%2001.png",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg19yM0EqvYrWcuKI28LWe4sQKJvUJ8MDbogaCkkki2VJuxWXMzw5v_KdWMmcuFlWc4jsV39QmBeYlcvUKfh7YTh5VlaiUIhbMX0YIKz09gbbuq_q_7lUh-0_ax_hfZBAlKVNkk1z5bWtT_wh4YPBHdH6LjKc-piJSbOfeZdsnhqtQRhEGmAOG4CSEFGWo/w480-h640/imagem%2002.png",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQMVv0GRWHOEBrbEuvfVVQEkum2h7kpNZbScWX36cCCLi4Bl7Xj0dtFUQ3R6tRAsZxQy0y4MVAzaleml85LLsmGk1rK9vIWNBV4PagF4Hw3L5P9PfUHCXnWdYUfYr4VpuprF8_mZwV-etGDRt5eHwi9iaphSu129NGJ6eKOjateQSCrigxWeW2hGqIDZ4/w480-h640/imagem%2003.png",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW17L4JjfW2Kjs4giP2wZT8d1gLfKUAtr_MTdFFIjIJo04NhNgOz0hyphenhyphentYZbbhRp_fCiODAbupBSMbJvnzJ441zer57-y8EghuUUcddSEKlhvqJrNEP3vsN4ICIDs2wHE5GhIwP7-iAgcxjBAR9RgWANiKHrWANmhddSmRx66JhHJd727JKfiCPuyxgGs4/w480-h640/imagem%2004.png",
+  "/images/imagem-01.webp",
+  "/images/imagem-02.webp",
+  "/images/imagem-03.webp",
+  "/images/imagem-04.webp",
 ];
 
 const testimonialImages = [
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCvoBnivvMhr34UZCtTZ8j32CJJI1fYcb1hM8DaxlxBQ_x48tCHhRN09PKQOXgTA14J4z00Xos4_BzvCWp-zuvZ3NjuvvbqOrCaK6rhVGzCj2rrXWa1zP_a-09Jye5OgBX6Weqwad8F1GGkv20GWaZkEV1mRImH8vFdeadMM0vBD7duI3kjk0m1WPSr9k/w480-h640/depoimento%20novo.jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOwQE2Mk7-4rCWo_VSL5sE2r8IwynP6V-ku1d6pZbb0eIjX364L3e9R17KVS0iYD0m7heqBl2mAr-677pMzstZbAfcqw2M2ctPOqc5GrJonC2_Fm0KtP1G0ZR0796jJzIo_BmDHmkO6Wl1pXuq1Dp0K_5JcRw0iDaiiKx71-owbsgIY3pshHHQs-KGnaI/w480-h640/novo%20depo%2001.jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhH7rBkGRoI88b35WpW_kIgK4NykmOLcZFWccNdmhI8sXTKTXe_TM0i_kMfM-xYkQd6VHQZbCvul7BWcuun4en1B_ACJWzIDuDUwOnw3tJ5VZDw3ovs_kgGOg5cZR1Zj3cw9XRs1ggGLjLce_9_vQxD1hIJqwkV_b8dStzJuPlayWoM0danJRS-zf21YtA/w480-h640/depoimento%20novo2.jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoLtgbb9XihDzyG2hgfHfB4M5y5zh5l76fa5NCroruysp1aMeycccyHphNiJD1YZpsa6gwMcUa74Ia38IGv5T4CE-tuxsGxBdtEVCiArzQsxGK6l7rU5VuFQgPXbQKkhCiLZAdUO9h1CBEq6-IcFdLEgaaS8pu8gqGncu-fr-f-JFvl2amoxpYMv4nq6o/w480-h640/novo%20depo%2002.jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf-3KBC8LsMWMM-PBre2O8J_ubHJQ95LR1PH4NREqCdylJKKraf1vVS1X0b66mYjfqjOHgj5BWadsA9SsdCI23AL2TpkyFHpmeixmh8JlD1t8Oo6WhL8l760p3yoOp4lLRvbkPCRllN1wP2xOudfBvG7PgMTd-Se1bz4rjWqMgC4XHasLe_hmL9U7tZoQ/w480-h640/Depoimento%2002.jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNoZZDeLwtOl3vBuqQXtk4LBoBFRhtuoJvxl1eOE9YTm4bDcTjyO-GbFWamYG9TgsAWeCe8s4zQHBI71NrnYIyuVpwsUMSJUKVQVxTgTdIpeeoyz_oLHv_FwgfSHusA_SdL-i6fByJr1o7wJ_FiHB1kdOIQHOuLoToklRB92ELkvj_PCcuKCw8pqXFtRw/w480-h640/novo%20depo%2003.jpeg",
-  "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXlv3_qs8Nz04hBEb5iU9ZphXd-UTYli0FsD9AJqCD9epzklTrFrfDp-Fvf52ZmjAdI4IMfVCrBc2GcSHXVAx96Fbe_rZ1uFGci1UnhqmVu5jD9-wqfXLqVfqu3_4HWVr0_e8dzmwIgucTgFzeYrvCXh7bp5r_u_TbHiZtswDFx9oXWKkuHF7nmEsHaSk/w480-h640/Depoimento%2003.jpeg"
+  "/images/testimonials/depo-01.webp",
+  "/images/testimonials/depo-02.webp",
+  "/images/testimonials/depo-03.webp",
+  "/images/testimonials/depo-04.webp",
+  "/images/testimonials/depo-05.webp",
+  "/images/testimonials/depo-06.webp",
+  "/images/testimonials/depo-07.webp"
 ];
 
 export default function App() {
@@ -361,9 +361,12 @@ export default function App() {
       {/* Header with Logo */}
       <header className="pt-6 pb-4 px-4 flex justify-center items-center">
         <img 
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8C3OKIhb0q4pDJlULfaOj3wLDKu0WQTQ08GXLpaiUMmQ8ms4bq3lZfCYv8orbuye6SRNkJr3yO0KEuiMoFQrs3khDhmpw388FhyphenhyphenLGPtOvtTLXDwqF8fH7tbOrsUsrBpHuWaxWFD8NGiCID12D6iLuSgYMRSr3R09bEDAdxq4n_iWnkDYbK7aDR2mPOHM/w400-h215/nova%20logo%20manual%20transparente.png" 
+          src="/images/logo.webp" 
           alt="Manual de Prática do Desenho" 
-          className="max-h-28 md:max-h-40 object-contain drop-shadow-md animate-scale-soft"
+          width={400}
+          height={215}
+          decoding="async"
+          className="max-h-28 md:max-h-40 w-auto object-contain drop-shadow-md animate-scale-soft"
         />
       </header>
 
@@ -385,6 +388,11 @@ export default function App() {
                     <img 
                       src={url} 
                       alt={`Preview do produto ${i + 1}`} 
+                      width={480}
+                      height={640}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      fetchPriority={i === 0 ? "high" : "auto"}
+                      decoding="async"
                       className="w-full aspect-[3/4] object-cover rounded-lg border-2 border-dashed border-gray-300 pointer-events-none" 
                     />
                   </div>
@@ -512,11 +520,18 @@ export default function App() {
         <section className="mb-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-[#2c2c2c]">Veja o Manual em mãos!</h2>
           <div className="relative bg-white border-4 border-[#2c2c2c] rounded-3xl p-3 shadow-[8px_8px_0px_0px_#436CC0] rotate-1 max-w-sm mx-auto">
-            <img 
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEge-bYBSyOazpnBOFwSAL6YXSSbnRKwcfufY3gy02kb8_ZVTQX4PTJ-mgCySkXfF4m2o7_sN0unc9R0tN-EiBCoRnw5Tt2K6vSlVmc9ng_45lg3iJCXwFU6OsQCeSRUEfs2OddZ-FrfV_OqzWER9mtxPuwWsd4g5hyphenhyphenSzCWmcqkRKrn4NKu3UGNz1G7R0hQ/s0/novo%20gif%20manual%20(reduzindo).gif" 
-              alt="Manual por dentro" 
-              className="w-full aspect-[3/4] object-cover border-4 border-dashed border-[#2c2c2c] rounded-2xl" 
-            />
+            <picture>
+              <source srcSet="/images/manual-animado.webp" type="image/webp" />
+              <img 
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEge-bYBSyOazpnBOFwSAL6YXSSbnRKwcfufY3gy02kb8_ZVTQX4PTJ-mgCySkXfF4m2o7_sN0unc9R0tN-EiBCoRnw5Tt2K6vSlVmc9ng_45lg3iJCXwFU6OsQCeSRUEfs2OddZ-FrfV_OqzWER9mtxPuwWsd4g5hyphenhyphenSzCWmcqkRKrn4NKu3UGNz1G7R0hQ/s0/novo%20gif%20manual%20(reduzindo).gif" 
+                alt="Manual por dentro" 
+                loading="lazy"
+                decoding="async"
+                width={480}
+                height={641}
+                className="w-full aspect-[3/4] object-cover border-4 border-dashed border-[#2c2c2c] rounded-2xl" 
+              />
+            </picture>
             
             {/* Sketchy decorations */}
             <div className="absolute -top-6 -right-6 text-4xl animate-bounce">✨</div>
@@ -553,6 +568,10 @@ export default function App() {
                       <img 
                         src={url} 
                         alt={`Depoimento ${i + 1}`} 
+                        loading="lazy"
+                        decoding="async"
+                        width={480}
+                        height={640}
                         className="w-full aspect-[3/4] object-cover rounded-lg border-2 border-dashed border-gray-300 pointer-events-none" 
                       />
                     </div>
@@ -654,9 +673,13 @@ export default function App() {
 
         <div className="flex justify-center mb-6 mt-8">
           <img 
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8C3OKIhb0q4pDJlULfaOj3wLDKu0WQTQ08GXLpaiUMmQ8ms4bq3lZfCYv8orbuye6SRNkJr3yO0KEuiMoFQrs3khDhmpw388FhyphenhyphenLGPtOvtTLXDwqF8fH7tbOrsUsrBpHuWaxWFD8NGiCID12D6iLuSgYMRSr3R09bEDAdxq4n_iWnkDYbK7aDR2mPOHM/w400-h215/nova%20logo%20manual%20transparente.png" 
+            src="/images/logo.webp" 
             alt="Manual de Prática do Desenho" 
-            className="h-16 md:h-20 object-contain drop-shadow-sm opacity-80 hover:opacity-100 transition-opacity"
+            loading="lazy"
+            decoding="async"
+            width={400}
+            height={215}
+            className="h-16 md:h-20 w-auto object-contain drop-shadow-sm opacity-80 hover:opacity-100 transition-opacity"
           />
         </div>
 
