@@ -666,6 +666,65 @@ export default function App() {
           </div>
         </section>
 
+        {/* Quem criou o Manual? */}
+        <section className="mb-14 max-w-3xl mx-auto">
+          <div className="bg-white p-6 md:p-10 rounded-3xl border-4 border-[#2c2c2c] shadow-[6px_6px_0px_0px_#2c2c2c] text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#2c2c2c]">
+              Quem criou o Manual?
+            </h2>
+
+            <div className="flex justify-center mb-6">
+              <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-full shadow-[6px_6px_0px_0px_#A505F1] bg-[#F4EDE3] p-2 flex items-center justify-center">
+                {/* Rotating dashed border around central axis */}
+                <div 
+                  className="absolute inset-0 rounded-full border-4 border-[#2c2c2c] border-dashed animate-spin-slow pointer-events-none"
+                  aria-hidden="true"
+                />
+                <img
+                  src="/images/ju.webp"
+                  alt="Junior Launther - Criador do Manual"
+                  className="w-full h-full object-cover rounded-full relative z-10"
+                  width={208}
+                  height={208}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-4 text-lg md:text-xl text-[#2c2c2c] leading-relaxed max-w-2xl mx-auto">
+              <p>
+                Oi! Eu sou o Junior Launther, artista e criador do <strong className="font-bold text-[#A505F1]">@ateliedoju</strong>. Compartilho minhas criações e ideias para despertar a criatividade, inclusive de quem acha que não sabe desenhar!
+              </p>
+              <p>
+                Estou há 17 anos na internet e também crio conteúdo para A Casa do Ju, que soma mais de 350 mil seguidores nas redes. Este Manual nasceu da minha vontade de tornar o desenho mais simples, acessível e divertido.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Button with 63% OFF Badge */}
+        <section className="mb-14 flex justify-center px-2">
+          <div className="relative w-full max-w-sm">
+            {/* Floating Offer Badge */}
+            <div className="absolute -top-3.5 -right-2 md:-right-3 z-20 pointer-events-none rotate-12">
+              <span className="inline-block bg-[#E52E2E] text-white text-xs md:text-sm font-black px-2.5 py-0.5 rounded-full border-2 border-[#2c2c2c] shadow-[2px_2px_0px_0px_#2c2c2c] animate-scale-pulse tracking-wide">
+                63% OFF
+              </span>
+            </div>
+
+            <a 
+              href={checkoutUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-full bg-[#A505F1] hover:bg-[#8204BE] text-white text-xl md:text-2xl font-bold py-3 md:py-4 px-4 md:px-8 rounded-2xl border-4 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] hover:translate-y-1 hover:translate-x-1 hover:shadow-[2px_2px_0px_0px_#2c2c2c] transition-all flex items-center justify-center gap-2 animate-shine"
+            >
+              <ShoppingCart className="w-6 h-6 shrink-0 animate-wiggle" />
+              <span className="text-center leading-tight whitespace-nowrap">COMPRAR AGORA</span>
+            </a>
+          </div>
+        </section>
+
       </main>
 
       <footer className="text-center py-8 text-gray-500 text-sm max-w-4xl mx-auto px-4 relative">
