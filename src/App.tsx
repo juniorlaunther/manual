@@ -1,4 +1,4 @@
-import { ShoppingCart, Star, Play, ShieldCheck, ArrowRight, PenTool, X, ChevronLeft, ChevronRight, MessageCircle, ChevronDown } from 'lucide-react';
+import { ShoppingCart, Star, Play, ShieldCheck, ArrowRight, PenTool, X, ChevronLeft, ChevronRight, MessageCircle, ChevronDown, Heart } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -53,12 +53,14 @@ export default function App() {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
   const [lightboxData, setLightboxData] = useState<{ index: number, type: 'product' | 'testimonial' } | null>(null);
   const [direction, setDirection] = useState(0);
-  const [purchaseNotification, setPurchaseNotification] = useState<string | null>(null);
+  const [purchaseNotification, setPurchaseNotification] = useState<{ type: 'single' | 'combo'; text: string } | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [checkoutUrl, setCheckoutUrl] = useState("https://pay.cakto.com.br/8oqdaiy_1129483");
+  const [comboCheckoutUrl, setComboCheckoutUrl] = useState("https://pay.cakto.com.br/pfpgcid");
 
   useEffect(() => {
     const checkoutBaseUrl = "https://pay.cakto.com.br/8oqdaiy_1129483";
+    const comboCheckoutBaseUrl = "https://pay.cakto.com.br/pfpgcid";
     const allowedParams = [
       "utm_source",
       "utm_medium",
@@ -91,13 +93,16 @@ export default function App() {
       }
 
       const newCheckoutUrl = new URL(checkoutBaseUrl);
+      const newComboCheckoutUrl = new URL(comboCheckoutBaseUrl);
       allowedParams.forEach(key => {
         if (storedParams[key]) {
           newCheckoutUrl.searchParams.set(key, storedParams[key]);
+          newComboCheckoutUrl.searchParams.set(key, storedParams[key]);
         }
       });
 
       setCheckoutUrl(newCheckoutUrl.toString());
+      setComboCheckoutUrl(newComboCheckoutUrl.toString());
     } catch (e) {
       console.error("Error setting UTM params", e);
     }
@@ -116,26 +121,65 @@ export default function App() {
     ];
 
     let timeoutId: NodeJS.Timeout;
+    let hideTimeoutId: NodeJS.Timeout;
+    let lastType: 'single' | 'combo' | null = null;
+    let consecutiveCount = 0;
+    let lastName = "";
 
     const showRandomNotification = () => {
-      const randomName = names[Math.floor(Math.random() * names.length)];
-      setPurchaseNotification(`${randomName} comprou!!`);
+      // Smart organic alternation: prevents the same product type from repeating more than 2 times in a row
+      let nextType: 'single' | 'combo';
+      if (lastType && consecutiveCount >= 2) {
+        nextType = lastType === 'single' ? 'combo' : 'single';
+      } else if (!lastType) {
+        nextType = Math.random() < 0.5 ? 'single' : 'combo';
+      } else {
+        nextType = Math.random() < 0.5 ? 'single' : 'combo';
+      }
 
-      // Hide after 3 seconds
-      setTimeout(() => {
+      if (nextType === lastType) {
+        consecutiveCount += 1;
+      } else {
+        lastType = nextType;
+        consecutiveCount = 1;
+      }
+
+      // Pick a random name different from the previous one
+      let randomName = names[Math.floor(Math.random() * names.length)];
+      if (names.length > 1) {
+        while (randomName === lastName) {
+          randomName = names[Math.floor(Math.random() * names.length)];
+        }
+      }
+      lastName = randomName;
+
+      const text = nextType === 'combo'
+        ? `${randomName} comprou o COMBO de Manuais`
+        : `${randomName} comprou!!`;
+
+      setPurchaseNotification({
+        type: nextType,
+        text,
+      });
+
+      // Hide after 3.5 seconds
+      hideTimeoutId = setTimeout(() => {
         setPurchaseNotification(null);
         
-        // Schedule next one between 5 to 15 seconds
-        const nextDelay = Math.floor(Math.random() * 10000) + 5000;
+        // Schedule next notification between 5 to 13 seconds
+        const nextDelay = Math.floor(Math.random() * 8000) + 5000;
         timeoutId = setTimeout(showRandomNotification, nextDelay);
-      }, 3000);
+      }, 3500);
     };
 
-    // Initial trigger
-    const initialDelay = Math.floor(Math.random() * 10000) + 5000;
+    // Initial trigger between 4 to 8 seconds
+    const initialDelay = Math.floor(Math.random() * 4000) + 4000;
     timeoutId = setTimeout(showRandomNotification, initialDelay);
 
-    return () => clearTimeout(timeoutId);
+    return () => {
+      clearTimeout(timeoutId);
+      clearTimeout(hideTimeoutId);
+    };
   }, []);
 
   const handleScroll = () => {
@@ -546,6 +590,87 @@ export default function App() {
           </a>
         </div>
 
+        {/* Mini Sessão de Combo */}
+        <section className="max-w-4xl mx-auto px-4 mb-14">
+          <div className="bg-[#A505F1] rounded-3xl border-4 border-[#0c0618] shadow-[8px_8px_0px_0px_#0c0618] p-6 sm:p-8 md:p-10 relative overflow-hidden">
+            {/* Cabeçalho da Seção */}
+            <div className="text-center mb-6 md:mb-8">
+              {/* 5 estrelinhas centralizadas */}
+              <div className="flex justify-center items-center gap-1.5 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-[#F4E285] text-[#F4E285] drop-shadow-sm" />
+                ))}
+              </div>
+
+              {/* Título principal em uma única linha */}
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white whitespace-nowrap mb-3 drop-shadow-sm">
+                Que tal levar o combo?
+              </h2>
+
+              {/* Subtítulo com destaque estilizado marcador */}
+              <div className="inline-block">
+                <span className="bg-[#F4E285] text-[#0c0618] px-3.5 py-1 rounded-xl font-black text-sm sm:text-base md:text-lg border-2 border-[#0c0618] shadow-[3px_3px_0px_0px_#0c0618] -rotate-1 inline-block tracking-wide">
+                  MANUAL ORIGINAL + HALLOWEEN
+                </span>
+              </div>
+            </div>
+
+            {/* Disposição / Layout responsivo */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+              {/* Imagem do Combo */}
+              <div className="w-full md:w-1/2 flex justify-center">
+                <img
+                  src="/images/combo-halloween.webp"
+                  alt="Combo Manual para Desenhar Original e Halloween"
+                  className="w-full max-w-[280px] sm:max-w-[340px] h-auto object-contain drop-shadow-lg"
+                  loading="lazy"
+                  decoding="async"
+                  width={340}
+                  height={340}
+                />
+              </div>
+
+              {/* Bloco de Preços e Botão (CTA) */}
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start max-w-sm">
+                <div className="text-center md:text-left mb-4">
+                  <span className="block line-through text-white/70 text-lg sm:text-xl font-bold">
+                    De R$52,80
+                  </span>
+                  <span
+                    className="inline-block text-4xl sm:text-5xl font-black text-[#F4E285] tracking-normal leading-none drop-shadow-[2px_2px_0px_#0c0618] mt-1"
+                    style={{ WebkitTextStroke: '0.5px #0c0618' }}
+                  >
+                    Por R$47,90
+                  </span>
+                </div>
+
+                <div className="relative w-full">
+                  {/* Selo de desconto na diagonal direita do botão */}
+                  <div className="absolute -top-3.5 -right-2 sm:-right-3 z-20 pointer-events-none rotate-12">
+                    <span className="inline-block bg-[#E52E2E] text-white text-xs sm:text-sm font-black px-2.5 sm:px-3 py-0.5 rounded-full border-2 border-[#0c0618] shadow-[2px_2px_0px_0px_#0c0618] uppercase tracking-wider animate-scale-pulse">
+                      10% OFF
+                    </span>
+                  </div>
+
+                  <a
+                    href={comboCheckoutUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#F4E285] hover:bg-[#FFE066] text-[#0c0618] text-xl sm:text-2xl font-black py-3.5 sm:py-4 px-4 sm:px-8 rounded-2xl border-4 border-[#0c0618] shadow-[4px_4px_0px_0px_#0c0618] hover:-translate-y-1 transition-all flex items-center justify-center gap-2 animate-shine"
+                  >
+                    <ShoppingCart className="w-6 h-6 shrink-0 animate-wiggle text-[#0c0618]" />
+                    <span className="text-center leading-tight whitespace-nowrap">QUERO O COMBO!!</span>
+                  </a>
+
+                  <p className="text-white/90 text-xs sm:text-sm font-semibold mt-3 text-center flex items-center justify-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 shrink-0 text-[#F4E285]" />
+                    <span>Acesso Imediato • Pagamento 100% Seguro</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Depoimentos Recentes */}
         <section className="mb-14">
@@ -751,15 +876,20 @@ export default function App() {
       <AnimatePresence>
         {purchaseNotification && (
           <motion.div
+            key={purchaseNotification.text}
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="fixed bottom-6 left-6 z-50 bg-[#4CAF50] text-white px-5 py-3 rounded-2xl border-2 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] flex items-center gap-3 font-bold text-sm md:text-base pointer-events-none"
+            className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 bg-[#4CAF50] text-white px-4 py-2.5 md:px-5 md:py-3 rounded-2xl border-2 border-[#2c2c2c] shadow-[4px_4px_0px_0px_#2c2c2c] flex items-center gap-3 font-bold text-sm md:text-base pointer-events-none max-w-[90vw]"
           >
-            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0">
-              <ShoppingCart className="w-4 h-4 text-white" />
+            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm text-base">
+              {purchaseNotification.type === 'combo' ? (
+                <span className="text-lg leading-none select-none" role="img" aria-label="Abóbora de Halloween">🎃</span>
+              ) : (
+                <Heart className="w-4.5 h-4.5 fill-[#A505F1] text-[#A505F1] shrink-0" />
+              )}
             </div>
-            {purchaseNotification}
+            <span className="leading-tight drop-shadow-sm">{purchaseNotification.text}</span>
           </motion.div>
         )}
       </AnimatePresence>
