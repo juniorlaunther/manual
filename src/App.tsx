@@ -56,26 +56,41 @@ export default function App() {
   const [purchaseNotification, setPurchaseNotification] = useState<{ type: 'single' | 'combo'; text: string } | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [checkoutUrl, setCheckoutUrl] = useState("https://pay.cakto.com.br/8oqdaiy_1129483");
-  const [comboCheckoutUrl, setComboCheckoutUrl] = useState("https://pay.cakto.com.br/pfpgcid");
+  const [comboCheckoutUrl, setComboCheckoutUrl] = useState("https://pay.cakto.com.br/3eaepnk");
 
   useEffect(() => {
     const checkoutBaseUrl = "https://pay.cakto.com.br/8oqdaiy_1129483";
-    const comboCheckoutBaseUrl = "https://pay.cakto.com.br/pfpgcid";
+    const comboCheckoutBaseUrl = "https://pay.cakto.com.br/3eaepnk";
     const allowedParams = [
       "utm_source",
-      "utm_medium",
       "utm_campaign",
+      "utm_medium",
       "utm_content",
-      "utm_term",
-      "utm_id",
-      "sck",
-      "xcod"
+      "utm_term"
     ];
 
     try {
-      const urlParams = new URLSearchParams(window.location.search);
+      let search = window.location.search;
+      if (!search && window.location.hash.includes("?")) {
+        search = window.location.hash.substring(window.location.hash.indexOf("?"));
+      }
+      const urlParams = new URLSearchParams(search);
+
       const storedParamsRaw = sessionStorage.getItem("manual_utm_params");
-      let storedParams = storedParamsRaw ? JSON.parse(storedParamsRaw) : {};
+      let storedParams: Record<string, string> = {};
+      if (storedParamsRaw) {
+        try {
+          const parsed = JSON.parse(storedParamsRaw);
+          // Only keep allowed params strictly
+          allowedParams.forEach(param => {
+            if (parsed[param]) {
+              storedParams[param] = parsed[param];
+            }
+          });
+        } catch {
+          storedParams = {};
+        }
+      }
       
       const hasAnyAllowedParam = allowedParams.some(param => urlParams.has(param) && urlParams.get(param));
 
@@ -610,7 +625,7 @@ export default function App() {
               {/* Subtítulo com destaque estilizado marcador */}
               <div className="inline-block">
                 <span className="bg-[#F4E285] text-[#0c0618] px-3.5 py-1 rounded-xl font-black text-sm sm:text-base md:text-lg border-2 border-[#0c0618] shadow-[3px_3px_0px_0px_#0c0618] -rotate-1 inline-block tracking-wide">
-                  MANUAL ORIGINAL + HALLOWEEN
+                  MANUAL ORIGINAL + NATAL
                 </span>
               </div>
             </div>
@@ -619,15 +634,18 @@ export default function App() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
               {/* Imagem do Combo */}
               <div className="w-full md:w-1/2 flex justify-center">
-                <img
-                  src="/images/combo-halloween.webp"
-                  alt="Combo Manual para Desenhar Original e Halloween"
-                  className="w-full max-w-[280px] sm:max-w-[340px] h-auto object-contain drop-shadow-lg"
-                  loading="lazy"
-                  decoding="async"
-                  width={340}
-                  height={340}
-                />
+                <picture>
+                  <source srcSet="/images/combo-natal.webp" type="image/webp" />
+                  <img
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO2uA1aDnF9akYux_XlI5t8Bnz0fFpY94kk4s58dFMCWm4TXqCpQJurVwhMUTKGIMnr7O7EtOegDIGCF8twVRHo6gkCcL8H6GDQO_gu8P76xd5rVV8uDrrYdT2XKbLqlGDxTwEMkSCHqnPXG6ZM2WSQYyGMKuzy4hriJ9d4oIwkYvxQNlMb8ro1VCcUO0/w400-h400/combo%20original%20e%20natal.png"
+                    alt="Combo Manual para Desenhar Original e Natal"
+                    className="w-full max-w-[280px] sm:max-w-[340px] h-auto object-contain drop-shadow-lg"
+                    loading="lazy"
+                    decoding="async"
+                    width={340}
+                    height={340}
+                  />
+                </picture>
               </div>
 
               {/* Bloco de Preços e Botão (CTA) */}
@@ -884,7 +902,7 @@ export default function App() {
           >
             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm text-base">
               {purchaseNotification.type === 'combo' ? (
-                <span className="text-lg leading-none select-none" role="img" aria-label="Abóbora de Halloween">🎃</span>
+                <span className="text-lg leading-none select-none" role="img" aria-label="Papai Noel">🎅</span>
               ) : (
                 <Heart className="w-4.5 h-4.5 fill-[#A505F1] text-[#A505F1] shrink-0" />
               )}
